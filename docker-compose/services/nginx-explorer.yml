@@ -5,7 +5,7 @@ services:
     image: nginx
     container_name: proxy
     extra_hosts:
-      - '42.112.59.109:host-gateway'
+      - '42.112.59.109:host-gateway' #Thay đổi IP này thành IP của máy chủ
     environment:
       BACK_PROXY_PASS: ${BACK_PROXY_PASS:-http://backend:4000}
       FRONT_PROXY_PASS: ${FRONT_PROXY_PASS:-http://frontend:3000}
